@@ -30,7 +30,7 @@ const ServiceDetailPage = async ({ params }: Props) => {
             key={index}
             reverse={index % 2 === 1}
             cta={c.cta}
-            mediaSrc={c.mediaSrc}
+            media={{ src: c.mediaSrc, alt: c.title }}
           >
             <SectionTitle>{c.title}</SectionTitle>
             <SectionDescription>{c.description}</SectionDescription>
