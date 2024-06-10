@@ -1,7 +1,6 @@
 import { MenuIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "./ui/sheet";
-import { NavigationMenu, NavigationMenuList } from "./ui/navigation-menu";
 
 type Props = {
   children: React.ReactNode;
