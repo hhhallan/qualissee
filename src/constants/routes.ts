@@ -5,7 +5,7 @@ export const routes = [
   },
   {
     label: "Services",
-    href: "",
+    href: "/#services",
     sublinks: [
       {
         title: "Audit",
