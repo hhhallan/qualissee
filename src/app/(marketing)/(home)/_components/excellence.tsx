@@ -1,6 +1,6 @@
 "use client";
 
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -14,6 +14,7 @@ import {
   Shield,
 } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
+import Link from "next/link";
 
 // TODO: modifier ce composant
 const tiles = [
@@ -156,29 +157,26 @@ export function ExcellenceCTA() {
             ))}
           </Marquee>
           <div className="absolute z-10">
-            <div className="mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md dark:bg-black/10 lg:size-32">
-              <HeartHandshake className="mx-auto size-16 text-black dark:text-white lg:size-24" />
+            <div className="mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md lg:size-32">
+              <HeartHandshake className="mx-auto size-16 text-black lg:size-24" />
             </div>
-            <div className="z-10 mt-4 flex flex-col items-center text-center text-primary">
+            <div className="z-10 mt-4 flex flex-col items-center text-center">
               <h1 className="text-3xl font-bold lg:text-4xl">
-                Stop wasting time on design.
+                Excellence Opérationnelle
               </h1>
-              <p className="mt-2">
-                Start your 7-day free trial. No credit card required.
+              <p className="mx-auto mt-2 max-w-[700px]">
+                Nos services optimisent vos processus internes, augmentent votre
+                efficacité, réduisent vos coûts et améliorent la satisfaction
+                client grâce à des méthodologies éprouvées.
               </p>
-              <a
-                href="/"
-                className={cn(
-                  buttonVariants({
-                    size: "lg",
-                    variant: "outline",
-                  }),
-                  "group mt-4 rounded-[2rem] px-6",
-                )}
+              <Button
+                size="lg"
+                variant="outline"
+                className="group mt-4 rounded-[2rem] px-6 text-primary"
               >
-                Get Started
+                <Link href="#">Découvrir nos services</Link>
                 <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
-              </a>
+              </Button>
             </div>
             <div className="absolute inset-0 -z-10 rounded-full bg-white opacity-40 blur-xl dark:bg-black" />
           </div>

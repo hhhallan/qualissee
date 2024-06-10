@@ -24,7 +24,7 @@ export const Logo = ({ size }: Props) => {
   }
 
   return (
-    <Link className="flex items-center gap-2 text-green-500" href="/#">
+    <Link className="flex items-center gap-2 text-primary" href="/#">
       <Search className={iconSize} />
       <span className={`${textSize} font-semibold`}>Qualissee</span>
     </Link>
