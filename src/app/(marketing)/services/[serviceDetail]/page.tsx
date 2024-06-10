@@ -9,6 +9,7 @@ type Props = {
   params: { serviceDetail: string };
 };
 
+// TODO: ajouter une partie DEVIS
 const ServiceDetailPage = async ({ params }: Props) => {
   const service = services.find((s) => s.id === params.serviceDetail);
 
