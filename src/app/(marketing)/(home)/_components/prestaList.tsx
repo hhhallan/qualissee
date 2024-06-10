@@ -6,7 +6,7 @@ type Props = {
 
 export const PrestaList = ({ children }: Props) => {
   return (
-    <section className="section">
+    <section id="services" className="section">
       <div className="container px-4 text-center md:px-6">
         <div className="space-y-3">
           <h2 className="title">Nos prestations</h2>
