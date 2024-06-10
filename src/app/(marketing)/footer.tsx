@@ -1,6 +1,5 @@
 import { Logo } from "@/components/logo";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 type Link = {
@@ -8,10 +7,12 @@ type Link = {
   url: string;
 };
 
-// TODO: créer les pages
 const links: Link[] = [
-  { text: "Mentions légales", url: "#" },
-  { text: "Politique de confidentialité", url: "#" },
+  { text: "Mentions légales", url: "/legal/mentions-legales" },
+  {
+    text: "Politique de confidentialité",
+    url: "/legal/politique-de-confidentialite",
+  },
 ];
 
 interface Icon {
