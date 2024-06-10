@@ -28,7 +28,7 @@ export function Header() {
               <SheetClose asChild>
                 <Link
                   href={route.href}
-                  className="flex w-full items-center bg-yellow-400 py-2 text-lg font-semibold"
+                  className="flex w-full items-center py-2 text-lg font-semibold"
                 >
                   {route.label}
                 </Link>
