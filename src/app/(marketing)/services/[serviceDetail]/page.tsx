@@ -3,51 +3,29 @@ import {
   SectionDescription,
   SectionTitle,
 } from "@/components/section";
-import {
-  audit,
-  conseil,
-  accompagnement,
-  formation,
-} from "@/constants/services";
+import { services } from "@/constants/services";
 
 type Props = {
   params: { serviceDetail: string };
 };
 
 const ServiceDetailPage = async ({ params }: Props) => {
-  let content;
-  let title;
+  const service = services.find((s) => s.id === params.serviceDetail);
 
-  switch (params.serviceDetail) {
-    case "audit":
-      content = audit;
-      title = "Audit";
-      break;
-    case "conseil":
-      content = conseil;
-      title = "Conseil";
-      break;
-    case "formation":
-      content = formation;
-      title = "Formation";
-      break;
-    case "accompagnement":
-      content = accompagnement;
-      title = "Accompagnement";
-      break;
-    default:
-      content = null;
-  }
-
-  if (!content) {
+  if (!service) {
     return <div className="text-center">Service detail not found</div>;
   }
 
   return (
     <>
-      <h1 className="py-10 text-4xl font-medium md:text-5xl">{title}</h1>
+      <div className="space-y-3 text-center">
+        <h1 className="title">{service.title}</h1>
+        <p className="description mx-auto max-w-[700px]">
+          {service.description}
+        </p>
+      </div>
       <ul className="flex flex-col">
-        {content.map((c, index) => (
+        {service.sections.map((c, index) => (
           <Section
             key={index}
             reverse={index % 2 === 1}
