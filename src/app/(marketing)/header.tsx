@@ -28,19 +28,19 @@ export function Header() {
               <SheetClose asChild>
                 <Link
                   href={route.href}
-                  className="flex w-full items-center py-2 text-lg font-semibold"
+                  className="inline-block w-full py-2 text-lg font-semibold"
                 >
                   {route.label}
                 </Link>
               </SheetClose>
               {route.sublinks && (
-                <ul className="pl-6">
+                <ul>
                   {route.sublinks.map((sub) => (
                     <li key={sub.title}>
                       <SheetClose asChild>
                         <Link
                           href={sub.href}
-                          className="text-l flex w-full items-center py-2 font-medium"
+                          className="text-l inline-block w-full py-2 pl-6 font-medium"
                         >
                           {sub.title}
                         </Link>
