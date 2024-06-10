@@ -7,14 +7,26 @@ export const routes = [
     label: "Services",
     href: "",
     sublinks: [
-      { title: "Audit", desc: "desc1", href: "/services/audit" },
-      { title: "Conseil", desc: "desc1", href: "/services/conseil" },
+      {
+        title: "Audit",
+        desc: "Évaluez vos processus et performances actuels, mettez en place des correctifs et obtenez un rapport final détaillé.",
+        href: "/services/audit",
+      },
+      {
+        title: "Conseil",
+        desc: "Nous vous aidons à optimiser vos processus, réduire vos coûts et augmenter votre productivité.",
+        href: "/services/conseil",
+      },
       {
         title: "Accompagnement",
-        desc: "desc1",
+        desc: "Bénéficiez d'une consultation personnalisée, d'un plan de mise en œuvre et d'un soutien continu pour réussir à long terme.",
         href: "/services/accompagnement",
       },
-      { title: "Formation", desc: "desc1", href: "/services/formation" },
+      {
+        title: "Formation",
+        desc: "Recevez une formation de base, participez à des ateliers pratiques et obtenez une certification reconnue.",
+        href: "/services/formation",
+      },
     ],
   },
   {
