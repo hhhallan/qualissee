@@ -25,22 +25,26 @@ export function Header() {
         <MobileNav>
           {routes.map((route, index) => (
             <li key={index}>
-              <Link
-                href={route.href}
-                className="flex w-full items-center py-2 text-lg font-semibold"
-              >
-                <SheetClose>{route.label}</SheetClose>
-              </Link>
+              <SheetClose asChild>
+                <Link
+                  href={route.href}
+                  className="flex w-full items-center bg-yellow-400 py-2 text-lg font-semibold"
+                >
+                  {route.label}
+                </Link>
+              </SheetClose>
               {route.sublinks && (
                 <ul className="pl-6">
                   {route.sublinks.map((sub) => (
                     <li key={sub.title}>
-                      <Link
-                        href={sub.href}
-                        className="text-l flex w-full items-center py-2 font-medium"
-                      >
-                        <SheetClose>{sub.title}</SheetClose>
-                      </Link>
+                      <SheetClose asChild>
+                        <Link
+                          href={sub.href}
+                          className="text-l flex w-full items-center py-2 font-medium"
+                        >
+                          {sub.title}
+                        </Link>
+                      </SheetClose>
                     </li>
                   ))}
                 </ul>
