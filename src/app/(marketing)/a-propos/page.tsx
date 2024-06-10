@@ -11,9 +11,12 @@ const AboutPage = () => {
                 L&apos;entreprise
               </h3>
               <p className="description max-w-[600px]">
-                The platform for rapid progress. Let your team focus on shipping
-                features instead of managing infrastructure with automated
-                CI/CD, built-in testing, and integrated collaboration.
+                Qualissee est une entreprise de consulting spécialisée dans
+                l&apos;amélioration des processus opérationnels et la gestion de
+                la qualité. Fondée avec la mission d&apos;aider les entreprises
+                à atteindre l&apos;excellence, nous offrons une gamme complète
+                de services pour optimiser vos opérations et garantir la
+                conformité aux normes.
               </p>
             </div>
             <div className="space-y-2">
@@ -28,7 +31,7 @@ const AboutPage = () => {
             </div>
           </div>
           <Image
-            src="/placeholder.svg"
+            src="/fondateurs.png"
             width="550"
             height="310"
             alt="Image"

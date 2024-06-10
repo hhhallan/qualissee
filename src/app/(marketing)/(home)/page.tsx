@@ -14,6 +14,8 @@ import { SeeMoreItem } from "./_components/see-more-item";
 import { Certification } from "@/components/certification";
 import { LInput } from "@/components/form/l-input";
 import { Button } from "@/components/ui/button";
+import { services } from "@/constants/services";
+import { qhse } from "@/constants/qhse";
 
 const HomePage = () => {
   return (
@@ -21,44 +23,46 @@ const HomePage = () => {
       <Hero />
 
       {/* INFOS */}
-      <Section cta={{ label: "Label", href: "#" }}>
-        <SectionTitle>Section 1 - normale</SectionTitle>
+      <Section
+        cta={{ label: "En savoir plus", href: "#" }}
+        media={{ src: "info.png", alt: "Informations" }}
+      >
+        <SectionTitle>Qualissee - Votre Partenaire de Confiance</SectionTitle>
         <SectionDescription>
-          The platform for rapid progress. Let your team focus on shipping
-          features instead of managing infrastructure with automated CI/CD,
-          built-in testing, and integrated collaboration.
+          Chez Qualissee, nous offrons une expertise inégalée dans
+          l&apos;amélioration des processus opérationnels, la gestion de la
+          qualité et la conformité réglementaire. Nos solutions sont conçues
+          pour identifier les opportunités d&apos;amélioration et mettre en
+          œuvre des stratégies efficaces pour vous aider à atteindre vos
+          objectifs commerciaux.
         </SectionDescription>
       </Section>
 
       {/* PRESTA */}
       <PrestaList>
-        <PrestaCard
-          title="Audit"
-          description={"petite description d'un audit"}
-        />
-        <PrestaCard
-          title="Audit"
-          description={"petite description d'un audit"}
-        />
-        <PrestaCard
-          title="Audit"
-          description={"petite description d'un audit"}
-        />
-        <PrestaCard
-          title="Audit"
-          description={"petite description d'un audit"}
-        />
+        {services.map((service, index) => (
+          <PrestaCard
+            key={index}
+            title={service.title}
+            description={service.description}
+            mediaSrc={service.mediaSrc}
+          />
+        ))}
       </PrestaList>
 
       {/* EXCELLENCE */}
       <ExcellenceCTA />
 
       {/* QHSE */}
-      <List title={"QHSE"} description={"description qhse"}>
-        <ListItem title={"Qualité"} />
-        <ListItem title={"Hygiène"} />
-        <ListItem title={"Sécurité"} />
-        <ListItem title={"Environnement"} />
+      <List
+        title={"QHSE"}
+        description={
+          "Nous vous accompagnons dans la mise en place de systèmes QHSE robustes qui garantissent la conformité aux normes réglementaires et favorisent une culture d'entreprise durable."
+        }
+      >
+        {qhse.map((i, index) => (
+          <ListItem key={index} title={i.title} mediaSrc={i.mediaSrc} />
+        ))}
       </List>
 
       {/* En savoir + */}
@@ -78,19 +82,19 @@ const HomePage = () => {
               Nous contacter
             </h3>
             <p className="description mt-3 max-w-xl">
-              At the same time, the fact that we are wholly owned and totally
-              independent from manufacturer and other group control gives you
-              confidence that we will only recommend what is right for you.
+              Vous avez des questions ou besoin d&apos;une consultation
+              personnalisée? Contactez-nous dès aujourd&apos;hui pour discuter
+              de vos besoins et découvrir comment Qualissee peut vous aider à
+              atteindre vos objectifs.
             </p>
 
             <div className="mt-8">
               <a href="#" className="text-2xl font-bold text-pink-600">
-                {" "}
-                0151 475 4450{" "}
+                +33 1 23 45 67 89
               </a>
 
               <address className="mt-2 not-italic">
-                282 Kevin Brook, Imogeneborough, CA 58517
+                123 Rue Fictive, 75001 Paris, France
               </address>
             </div>
           </div>
