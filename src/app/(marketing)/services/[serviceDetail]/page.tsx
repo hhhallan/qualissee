@@ -9,7 +9,6 @@ type Props = {
   params: { serviceDetail: string };
 };
 
-// TODO: ajouter une partie DEVIS
 const ServiceDetailPage = async ({ params }: Props) => {
   const service = services.find((s) => s.id === params.serviceDetail);
 
@@ -19,7 +18,7 @@ const ServiceDetailPage = async ({ params }: Props) => {
 
   return (
     <>
-      <div className="space-y-3 text-center">
+      <div className="space-y-3 px-4 text-center md:px-6">
         <h1 className="title">{service.title}</h1>
         <p className="description mx-auto max-w-[700px]">
           {service.description}

@@ -115,4 +115,33 @@ export const services = [
       },
     ],
   },
+  {
+    id: "externalisation",
+    title: "Externalisation",
+    description:
+      "Externalisez votre gestion QHSE pour vous concentrer sur votre cœur de métier et améliorer la performance globale de votre entreprise.",
+    mediaSrc: "audit.png",
+    sections: [
+      {
+        title: "Gestion QHSE Externalisée",
+        description:
+          "Déléguez la gestion de la qualité, de la santé, de la sécurité et de l&apos;environnement à nos experts. Nous nous assurons que vos normes QHSE sont maintenues au plus haut niveau, vous permettant de vous concentrer sur vos activités principales.",
+        cta: { label: "En savoir plus", href: "#" },
+        mediaSrc: "placeholder.svg",
+      },
+      {
+        title: "Réduction des Risques",
+        description:
+          "Minimisez les risques liés à la conformité QHSE grâce à notre expertise. Nous identifions les potentiels de non-conformité et mettons en place des stratégies pour garantir une gestion proactive des risques.",
+        mediaSrc: "placeholder.svg",
+      },
+      {
+        title: "Amélioration Continue",
+        description:
+          "Engagez-vous dans un processus d&apos;amélioration continue avec nos services d&apos;externalisation. Nous analysons régulièrement vos performances QHSE et apportons des améliorations pour une meilleure efficacité et conformité.",
+        cta: { label: "En savoir plus", href: "#" },
+        mediaSrc: "placeholder.svg",
+      },
+    ],
+  },
 ];

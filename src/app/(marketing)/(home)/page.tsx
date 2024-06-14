@@ -5,7 +5,6 @@ import {
 } from "@/components/section";
 import { Hero } from "./_components/hero";
 import { PrestaCard } from "./_components/presta-card";
-import { PrestaList } from "./_components/presta-list";
 import { ExcellenceCTA } from "./_components/excellence";
 import { List } from "@/components/list";
 import { ListItem } from "@/components/list-item";
@@ -38,7 +37,12 @@ const HomePage = () => {
       </Section>
 
       {/* PRESTA */}
-      <PrestaList>
+      <List
+        title="Nos prestations"
+        description="Découvrez nos différentes prestations pour répondre à tous vos besoins."
+        id="services"
+        secondary
+      >
         {services.map((service, index) => (
           <PrestaCard
             key={index}
@@ -48,7 +52,7 @@ const HomePage = () => {
             href={`/services/${service.id}`}
           />
         ))}
-      </PrestaList>
+      </List>
 
       {/* EXCELLENCE */}
       <ExcellenceCTA />
@@ -61,7 +65,12 @@ const HomePage = () => {
         }
       >
         {qhse.map((i, index) => (
-          <ListItem key={index} title={i.title} mediaSrc={i.mediaSrc} />
+          <ListItem
+            key={index}
+            title={i.title}
+            mediaSrc={i.mediaSrc}
+            modalId={i.id}
+          />
         ))}
       </List>
 

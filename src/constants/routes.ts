@@ -23,15 +23,15 @@ export const routes = [
         href: "/services/accompagnement",
       },
       {
-        title: "Formation",
-        desc: "Recevez une formation de base, participez à des ateliers pratiques et obtenez une certification reconnue.",
-        href: "/services/formation",
+        title: "Externalisation",
+        desc: "Externalisez votre gestion QHSE pour vous concentrer sur votre cœur de métier et améliorer la performance globale de votre entreprise.",
+        href: "/services/externalisation",
       },
     ],
   },
   {
-    label: "Formations",
-    href: "/formations",
+    label: "Formation",
+    href: "/services/formation",
   },
   {
     label: "À propos",
