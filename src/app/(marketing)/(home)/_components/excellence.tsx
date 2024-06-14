@@ -1,22 +1,21 @@
 "use client";
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import { motion, useAnimation, useInView } from "framer-motion";
 import {
-  BarChart,
+  Building2,
   ChevronRight,
-  File,
+  Fingerprint,
   Globe,
   HeartHandshake,
-  Rss,
-  Shield,
+  ShieldCheck,
+  Trees,
 } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 
-// TODO: modifier ce composant
 const tiles = [
   {
     icon: <HeartHandshake className="size-full" />,
@@ -31,25 +30,25 @@ const tiles = [
     ),
   },
   {
-    icon: <File className="size-full" />,
+    icon: <Trees className="size-full" />,
     bg: (
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-green-500 via-teal-500 to-emerald-600 opacity-70 blur-[20px] filter"></div>
     ),
   },
   {
-    icon: <Shield className="size-full" />,
+    icon: <ShieldCheck className="size-full" />,
     bg: (
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 opacity-70 blur-[20px] filter"></div>
     ),
   },
   {
-    icon: <Rss className="size-full" />,
+    icon: <Fingerprint className="size-full" />,
     bg: (
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-orange-600 via-rose-600 to-violet-600 opacity-70 blur-[20px] filter"></div>
     ),
   },
   {
-    icon: <BarChart className="size-full" />,
+    icon: <Building2 className="size-full" />,
     bg: (
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400 opacity-70 blur-[20px] filter"></div>
     ),
