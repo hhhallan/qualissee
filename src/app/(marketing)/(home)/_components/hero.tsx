@@ -12,7 +12,7 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="flex h-[65vh] w-full items-center justify-center"
+      className="flex h-[50vh] w-full items-center justify-center md:h-[65vh]"
     >
       <div className="container px-4 text-center md:px-6">
         <h1 className="text-5xl font-normal leading-none tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">
