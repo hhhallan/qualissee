@@ -1,6 +1,6 @@
 "use client";
 
-import { LInput } from "@/components/form/l-input";
+import { LInput, LSelect } from "@/components/inputs";
 import { Button } from "@/components/ui/button";
 
 type Props = {};
@@ -32,13 +32,37 @@ export const Contact = ({}: Props) => {
         </div>
 
         <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
+          {/* TODO: Créer un composant FormContact */}
+          {/* TODO: Ajout de l'obligation de certains champs */}
           <form action="#" className="space-y-4">
-            <LInput name="email" type="email" label="Email" />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <LInput
+                name="name"
+                type="text"
+                label="Nom de l'entreprise*"
+                placeholder="Qualissee"
+              />
+              <LInput
+                name="email"
+                type="email"
+                label="Email*"
+                placeholder="qualissee@ql.com"
+              />
+            </div>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <LInput name="Nom" type="text" label="Nom" />
-              <LInput name="Prénom" type="text" label="Prénom" />
+              <LInput name="address" type="text" label="Adresse" />
+              <LInput name="tel" type="tel" label="Tél." />
             </div>
+
+            <LSelect
+              label="Objet de la demande"
+              choices={[
+                { label: "Devis Audit", value: "audit" },
+                { label: "Devis Conseil", value: "conseil" },
+                { label: "Devis Formation", value: "formation" },
+              ]}
+            />
 
             <LInput
               label="Message"
