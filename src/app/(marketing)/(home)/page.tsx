@@ -61,7 +61,12 @@ const HomePage = () => {
         }
       >
         {qhse.map((i, index) => (
-          <ListItem key={index} title={i.title} mediaSrc={i.mediaSrc} />
+          <ListItem
+            key={index}
+            title={i.title}
+            mediaSrc={i.mediaSrc}
+            modalId={i.id}
+          />
         ))}
       </List>
 
