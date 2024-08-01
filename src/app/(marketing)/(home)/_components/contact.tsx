@@ -1,5 +1,6 @@
 "use client";
 
+import { FormContact } from "@/components/form-contact";
 import { LInput, LSelect } from "@/components/inputs";
 import { Button } from "@/components/ui/button";
 
@@ -34,7 +35,7 @@ export const Contact = ({}: Props) => {
         <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
           {/* TODO: Créer un composant FormContact */}
           {/* TODO: Ajout de l'obligation de certains champs */}
-          <form action="#" className="space-y-4">
+          {/* <form action="#" className="space-y-4">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <LInput
                 name="name"
@@ -75,7 +76,9 @@ export const Contact = ({}: Props) => {
             <div className="mt-4">
               <Button type="submit">Envoyer</Button>
             </div>
-          </form>
+          </form> */}
+
+          <FormContact />
         </div>
       </div>
     </section>
