@@ -4,7 +4,7 @@ export const services = [
     title: "Conseil",
     description:
       "Nous vous aidons à optimiser vos processus, réduire vos coûts et augmenter votre productivité.",
-    mediaSrc: "audit.png",
+    mediaSrc: "conseil.png",
     sections: [
       {
         title: "Optimisation des Processus",
@@ -62,7 +62,7 @@ export const services = [
     title: "Formation",
     description:
       "Recevez une formation de base, participez à des ateliers pratiques et obtenez une certification reconnue.",
-    mediaSrc: "audit.png",
+    mediaSrc: "formation.png",
     sections: [
       {
         title: "Cours Introductifs",
@@ -91,7 +91,7 @@ export const services = [
     title: "Accompagnement",
     description:
       "Bénéficiez d'une consultation personnalisée, d'un plan de mise en œuvre et d'un soutien continu pour réussir à long terme.",
-    mediaSrc: "audit.png",
+    mediaSrc: "accompagnement.png",
     sections: [
       {
         title: "Consultation Personnalisée",
@@ -120,7 +120,7 @@ export const services = [
     title: "Externalisation",
     description:
       "Externalisez votre gestion QHSE pour vous concentrer sur votre cœur de métier et améliorer la performance globale de votre entreprise.",
-    mediaSrc: "audit.png",
+    mediaSrc: "externalisation.png",
     sections: [
       {
         title: "Gestion QHSE Externalisée",
