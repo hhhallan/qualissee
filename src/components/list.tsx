@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { Container, Section } from "./craft";
 
 type Props = {
   children: React.ReactNode;
@@ -9,28 +9,18 @@ type Props = {
   id?: string;
   secondary?: boolean;
 };
-export const List = ({
-  children,
-  title,
-  description,
-  id,
-  secondary,
-}: Props) => {
-  const activeClass = secondary
-    ? "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
-    : "md:grid-cols-2 lg:grid-cols-4";
-
+export const List = ({ children, title, description, id }: Props) => {
   return (
-    <section id={id || ""} className="section">
-      <div className="container px-4 text-center md:px-6">
+    <Section id={id} className="section">
+      <Container className="container text-center">
         <div className="space-y-3 text-center">
           <h2 className="title">{title}</h2>
           <p className="description mx-auto max-w-[700px]">{description}</p>
         </div>
-        <div className={cn("mt-12 grid grid-cols-1 gap-6", activeClass)}>
+        <div className="mt-12 flex flex-wrap justify-center gap-8">
           {children}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 };

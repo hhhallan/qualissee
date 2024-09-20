@@ -1,4 +1,4 @@
-import { Logo } from "@/components/logo";
+import { Logo } from "@/components/reusable/logo";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 

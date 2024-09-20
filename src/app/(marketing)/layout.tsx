@@ -1,5 +1,5 @@
+import { Navbar } from "@/components/reusable/navbar";
 import { Footer } from "./footer";
-import { Header } from "./header";
 
 type Props = {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ type Props = {
 const MarketingLayout = ({ children }: Props) => {
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+      <Navbar />
       <main className="mt-[72px] flex flex-1 flex-col items-center">
         {children}
       </main>

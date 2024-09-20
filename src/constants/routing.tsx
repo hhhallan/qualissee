@@ -1,4 +1,4 @@
-export const routes = [
+export const ROUTES = [
   {
     label: "Accueil",
     href: "/#home",

@@ -1,16 +1,17 @@
 import {
-  Section,
-  SectionDescription,
-  SectionTitle,
-} from "@/components/section";
-import { services } from "@/constants/services";
+  SectionC,
+  SectionCDescription,
+  SectionCTitle,
+} from "@/components/reusable/section";
+import { DATA } from "@/constants/resume";
 
 type Props = {
   params: { serviceDetail: string };
 };
 
 const ServiceDetailPage = async ({ params }: Props) => {
-  const service = services.find((s) => s.id === params.serviceDetail);
+  const data = DATA.presta;
+  const service = data.find((s) => s.id === params.serviceDetail);
 
   if (!service) {
     return <div className="text-center">Service detail not found</div>;
@@ -26,15 +27,15 @@ const ServiceDetailPage = async ({ params }: Props) => {
       </div>
       <ul className="flex flex-col">
         {service.sections.map((c, index) => (
-          <Section
+          <SectionC
             key={index}
             reverse={index % 2 === 1}
-            cta={c.cta}
+            // cta={c.cta}
             media={{ src: c.mediaSrc, alt: c.title }}
           >
-            <SectionTitle>{c.title}</SectionTitle>
-            <SectionDescription>{c.description}</SectionDescription>
-          </Section>
+            <SectionCTitle>{c.title}</SectionCTitle>
+            <SectionCDescription>{c.description}</SectionCDescription>
+          </SectionC>
         ))}
       </ul>
     </>
