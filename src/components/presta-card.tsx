@@ -11,7 +11,7 @@ type Props = {
 
 export const PrestaCard = ({ title, description, mediaSrc, href }: Props) => {
   return (
-    <div className="group relative flex flex-col justify-between overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+    <div className="group relative flex w-full min-w-[250px] max-w-[350px] flex-col overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
       <Link href={href} className="absolute inset-0 z-10" prefetch={false}>
         <span className="sr-only">View</span>
       </Link>

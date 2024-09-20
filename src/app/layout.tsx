@@ -5,6 +5,7 @@ import { SecurityModal } from "@/components/modals/security-modal";
 import { QualityModal } from "@/components/modals/quality-modal";
 import { EnvironmentModal } from "@/components/modals/environment-modal";
 import { HygieneModal } from "@/components/modals/hygiene-modal";
+import { Layout } from "@/components/craft";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -31,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <Layout className="scroll-smooth">
       <body className={`${poppins.variable} ${roboto.variable}`}>
         <QualityModal />
         <EnvironmentModal />
@@ -39,6 +40,6 @@ export default function RootLayout({
         <SecurityModal />
         {children}
       </body>
-    </html>
+    </Layout>
   );
 }

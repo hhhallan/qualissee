@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
+import { DATA } from "@/constants/resume";
 
 const tiles = [
   {
@@ -123,6 +124,8 @@ export function ExcellenceCTA() {
     }
   }, []);
 
+  const data = DATA.landing.excellence;
+
   return (
     <section className="section">
       <div className="container flex w-full flex-col items-center justify-center p-4">
@@ -160,20 +163,14 @@ export function ExcellenceCTA() {
               <HeartHandshake className="mx-auto size-16 text-black lg:size-24" />
             </div>
             <div className="z-10 mt-4 flex flex-col items-center text-center">
-              <h1 className="text-3xl font-bold lg:text-4xl">
-                Excellence Opérationnelle
-              </h1>
-              <p className="mx-auto mt-2 max-w-[700px]">
-                Nos services optimisent vos processus internes, augmentent votre
-                efficacité, réduisent vos coûts et améliorent la satisfaction
-                client grâce à des méthodologies éprouvées.
-              </p>
+              <h1 className="text-3xl font-bold lg:text-4xl">{data.title}</h1>
+              <p className="mx-auto mt-2 max-w-[700px]">{data.description}</p>
               <Button
                 size="lg"
                 variant="outline"
                 className="group mt-4 rounded-[2rem] px-6 text-primary"
               >
-                <Link href="#">Découvrir nos services</Link>
+                <Link href={data.link.label}>{data.link.label}</Link>
                 <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
               </Button>
             </div>

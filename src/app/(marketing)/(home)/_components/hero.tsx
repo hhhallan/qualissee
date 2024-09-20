@@ -1,30 +1,20 @@
+import { Container, Section } from "@/components/craft";
 import WordRotate from "@/components/magicui/word-rotate";
+import { DATA } from "@/constants/resume";
 
 export const Hero = () => {
-  const words = [
-    "performance",
-    "stratégie",
-    "optimisation",
-    "conseil",
-    "excellence",
-  ];
+  const data = DATA.landing.hero;
+  const words: string[] = Array.from(data.title.words);
 
   return (
-    <section
-      id="home"
-      className="flex h-[50vh] w-full items-center justify-center md:h-[65vh]"
-    >
-      <div className="container px-4 text-center md:px-6">
+    <Section id="home">
+      <Container className="container text-center">
         <h1 className="text-5xl font-normal leading-none tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">
-          Boostez votre entreprise avec notre expertise en{" "}
+          {data.title.t}
           <WordRotate className="text-primary" words={words} />
         </h1>
-        <p className="description mx-auto mt-6 max-w-3xl">
-          Simplifiez vos opérations et concentrez-vous sur ce qui compte
-          vraiment. Notre équipe de consultants est là pour vous aider à
-          atteindre l&apos;excellence.
-        </p>
-      </div>
-    </section>
+        <p className="description mx-auto mt-6 max-w-3xl">{data.description}</p>
+      </Container>
+    </Section>
   );
 };
