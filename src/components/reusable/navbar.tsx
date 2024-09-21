@@ -12,16 +12,16 @@ import { MenuIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetTrigger, SheetContent, SheetClose } from "../ui/sheet";
 import { Container } from "../craft";
-import Image from "next/image";
 import { ROUTES } from "@/constants/routing";
 import React from "react";
 import { Logo } from "./logo";
 
 export const Navbar = () => {
   return (
-    <Container className="w-full !py-0">
+    <Container className="fixed z-50 w-full bg-background !py-0">
       <header className="flex h-20 w-full shrink-0 items-center justify-between">
         {/* MOBILE NAVIGATION */}
+        <Logo size="m" className="flex" />
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="md:hidden">
@@ -29,23 +29,14 @@ export const Navbar = () => {
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="left" className="">
-            <Link href="#" prefetch={false}>
-              <Image
-                height={1200}
-                width={1200}
-                alt="Logo"
-                src={"/logo.svg"}
-                className="size-[48px]"
-              />
-              <span className="sr-only">Qualissee</span>
-            </Link>
+          <SheetContent side="left">
+            <Logo size="m" />
             <div className="grid gap-2 py-6">
               {ROUTES.map((route, i) => (
                 <React.Fragment key={i}>
                   <Link
                     href={route.href}
-                    className="flex w-full items-center py-2 text-lg font-semibold"
+                    className="flex w-full items-center py-2 text-lg font-semibold hover:text-accent"
                     prefetch={false}
                   >
                     {route.label}
@@ -56,7 +47,7 @@ export const Navbar = () => {
                         <Link
                           key={j}
                           href={sublink.href}
-                          className="flex w-full items-center py-2 text-base font-medium text-gray-500"
+                          className="flex w-full items-center py-2 text-base font-medium text-gray-500 hover:text-accent"
                           prefetch={false}
                         >
                           {sublink.title}
@@ -71,7 +62,6 @@ export const Navbar = () => {
         </Sheet>
 
         {/* LARGE NAVIGATION */}
-        <Logo size="l" />
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             {ROUTES.map((route, i) => (
