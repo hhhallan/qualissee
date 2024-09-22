@@ -10,7 +10,7 @@ import {
 } from "../ui/navigation-menu";
 import { MenuIcon } from "lucide-react";
 import { Button } from "../ui/button";
-import { Sheet, SheetTrigger, SheetContent, SheetClose } from "../ui/sheet";
+import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
 import { Container } from "../craft";
 import { ROUTES } from "@/constants/routing";
 import React from "react";
@@ -18,10 +18,12 @@ import { Logo } from "./logo";
 
 export const Navbar = () => {
   return (
-    <Container className="fixed z-50 w-full bg-background !py-0">
+    <Container className="fixed left-0 right-0 z-50 w-full bg-background !py-0">
       <header className="flex h-20 w-full shrink-0 items-center justify-between">
+        <div className="flex w-full items-center justify-center md:justify-start">
+          <Logo size="m" />
+        </div>
         {/* MOBILE NAVIGATION */}
-        <Logo size="m" className="flex" />
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="md:hidden">
@@ -62,6 +64,7 @@ export const Navbar = () => {
         </Sheet>
 
         {/* LARGE NAVIGATION */}
+
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             {ROUTES.map((route, i) => (
