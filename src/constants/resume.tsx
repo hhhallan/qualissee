@@ -2,22 +2,18 @@ export const DATA = {
   landing: {
     hero: {
       title: {
-        t: `Boostez votre entreprise avec notre expertise en `,
-        words: [
-          "performance",
-          "stratégie",
-          "optimisation",
-          "conseil",
-          "excellence",
-        ],
+        t: `Boostez votre entreprise en vous accompagnant d'experts en `,
+        t2: `Allons ensemble vers `,
+        words: ["stratégie", "conseil"],
+        words2: ["l'excellence opérationnelle", "un avenir radieux"],
       },
       description: `Simplifiez vos opérations et concentrez-vous sur ce qui compte vraiment. Notre équipe de consultants est là pour vous aider à atteindre l'excellence.`,
     },
     info: {
       title: "Qualissee - Votre Partenaire de Confiance",
       description:
-        "Chez Qualissee, nous offrons une expertise inégalée dans l'amélioration des processus opérationnels, la gestion de la qualité et la conformité réglementaire. Nos solutions sont conçues pour identifier les opportunités d'amélioration et mettre en œuvre des stratégies efficaces pour vous aider à atteindre vos objectifs commerciaux.",
-      cta: { label: "En savoir plus", href: "#" },
+        "Chez Qualissee, nous offrons une expertise inégalée dans l'amélioration des processus opérationnels, la gestion QHSE et la conformité réglementaire. Nos solutions sont conçues pour identifier les opportunités d'amélioration et mettre en œuvre des stratégies efficaces pour vous aider à atteindre vos objectifs.",
+      cta: { label: "Qui sommes nous ?", href: "a-propos" },
       image: { src: "info.png", alt: "Informations" },
     },
     presta: {
@@ -29,16 +25,28 @@ export const DATA = {
       title: "Excellence opérationnelle",
       description:
         " Nos services optimisent vos processus internes, augmentent votre efficacité, réduisent vos coûts et améliorent la satisfaction client grâce à des méthodologies éprouvées.",
-      link: { label: "Découvrir nos services", href: "#" },
+      link: { label: "En savoir plus", href: "#" },
     },
     qhse: {
       title: "QHSE",
       description:
         "Nous vous accompagnons dans la mise en place de systèmes QHSE robustes qui garantissent la conformité aux normes réglementaires et favorisent une culture d'entreprise durable.",
       items: [
-        { title: "Qualité", mediaSrc: "quality.png", id: "quality" },
-        { title: "Hygiène", mediaSrc: "hygiene.png", id: "hygiene" },
-        { title: "Sécurité", mediaSrc: "securite.png", id: "security" },
+        {
+          title: "Qualité",
+          mediaSrc: "quality.png",
+          id: "quality",
+        },
+        {
+          title: "Hygiène",
+          mediaSrc: "hygiene.png",
+          id: "hygiene",
+        },
+        {
+          title: "Sécurité",
+          mediaSrc: "securite.png",
+          id: "security",
+        },
         {
           title: "Environnement",
           mediaSrc: "environnement.png",
@@ -80,7 +88,8 @@ export const DATA = {
       title: "Nous contacter",
       description:
         "Vous avez des questions ou besoin d'une consultation personnalisée ? Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment Qualissee peut vous aider à atteindre vos objectifs.",
-      number: "+33 1 23 45 67 89",
+      number: "+33 6 77 25 80 96",
+      number2: "+33 7 62 37 53 23",
       address: "123 Rue Fictive, 75001 Paris, France",
     },
   },

@@ -19,7 +19,7 @@ type CTA = {
 type Props = {
   children: React.ReactNode;
   reverse?: boolean;
-  media?: Media;
+  media?: Media | React.ReactNode;
   cta?: CTA;
   id?: string;
 };
@@ -31,6 +31,7 @@ const SectionCTitle = ({ children }: Props) => {
     </h2>
   );
 };
+
 const SectionCDescription = ({ children }: Props) => {
   return (
     <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed">
@@ -40,6 +41,38 @@ const SectionCDescription = ({ children }: Props) => {
 };
 
 const SectionC = ({ reverse, children, media, cta, id }: Props) => {
+  const renderMedia = () => {
+    if (!media) {
+      return (
+        <Image
+          src="/placeholder.svg"
+          width="1280"
+          height="720"
+          alt="Placeholder"
+          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+        />
+      );
+    }
+
+    if (typeof media === 'object' && 'src' in media && 'alt' in media) {
+      return (
+        <Image
+          src={`/${media.src}`}
+          width="1280"
+          height="720"
+          alt={media.alt}
+          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+        />
+      );
+    }
+
+    return (
+      <div className="mx-auto aspect-video overflow-hidden rounded-xl sm:w-full">
+        {media}
+      </div>
+    );
+  };
+
   return (
     <Section id={id}>
       <Container className="container grid items-center gap-6 lg:grid-cols-2 lg:gap-10">
@@ -53,13 +86,7 @@ const SectionC = ({ reverse, children, media, cta, id }: Props) => {
             </Button>
           )}
         </div>
-        <Image
-          src={`/${media?.src || "placeholder.svg"}`}
-          width="1280"
-          height="720"
-          alt={media?.alt || "Image"}
-          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-        />
+        {renderMedia()}
       </Container>
     </Section>
   );
