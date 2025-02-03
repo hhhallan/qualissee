@@ -13,10 +13,9 @@ const HomePage = () => {
       <Hero />
       <Info />
       <Presta />
-      <ExcellenceCTA />
       <QHSE />
-      <SeeMore />
-      <Certification />
+      {/* <SeeMore /> */}
+      {/* <Certification /> */}
       <Contact />
     </>
   );

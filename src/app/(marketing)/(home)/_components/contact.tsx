@@ -21,8 +21,12 @@ export const Contact = () => {
             <a href="#" className="text-2xl font-bold text-pink-600">
               {data.number}
             </a>
+            <br />
+            <a href="#" className="text-2xl font-bold text-pink-600">
+              {data.number2}
+            </a>
 
-            <address className="mt-2 not-italic">{data.address}</address>
+            {/* <address className="mt-2 not-italic">{data.address}</address> */}
           </div>
         </div>
 
@@ -56,6 +60,8 @@ export const Contact = () => {
                 { label: "Devis Audit", value: "audit" },
                 { label: "Devis Conseil", value: "conseil" },
                 { label: "Devis Formation", value: "formation" },
+                { label: "Devis Externalisation", value: "externalisation" },
+                { label: "Devis Accompagnement", value: "accompagnement" },
               ]}
             />
 

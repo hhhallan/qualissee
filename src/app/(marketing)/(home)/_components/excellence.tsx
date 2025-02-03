@@ -127,8 +127,6 @@ export function ExcellenceCTA() {
   const data = DATA.landing.excellence;
 
   return (
-    <section className="section">
-      <div className="container flex w-full flex-col items-center justify-center p-4">
         <div className="relative flex w-full max-w-[1000px] flex-col items-center justify-center overflow-hidden rounded-[2rem] border">
           <Marquee
             reverse
@@ -178,7 +176,5 @@ export function ExcellenceCTA() {
           </div>
           <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent to-white to-70% dark:to-black" />
         </div>
-      </div>
-    </section>
   );
 }

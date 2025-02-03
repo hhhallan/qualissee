@@ -4,6 +4,7 @@ import {
   SectionCTitle,
 } from "@/components/reusable/section";
 import { DATA } from "@/constants/resume";
+import { ExcellenceCTA } from "./excellence";
 
 export const Info = () => {
   const data = DATA.landing.info;
@@ -12,10 +13,11 @@ export const Info = () => {
     <SectionC
       id="info"
       cta={{ label: data.cta.label, href: data.cta.href }}
-      media={{ src: data.image.src, alt: data.image.alt }}
+      media={<ExcellenceCTA />}
+      // media={{ src: data.image.src, alt: data.image.alt }}
     >
       <SectionCTitle>{data.title}</SectionCTitle>
-      <SectionCDescription>{data.description}</SectionCDescription>
+      <SectionCDescription>{data.description}</SectionCDescription>      
     </SectionC>
   );
 };

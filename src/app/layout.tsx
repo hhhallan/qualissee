@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Roboto } from "next/font/google";
 import "./globals.css";
-import { SecurityModal } from "@/components/modals/security-modal";
-import { QualityModal } from "@/components/modals/quality-modal";
-import { EnvironmentModal } from "@/components/modals/environment-modal";
-import { HygieneModal } from "@/components/modals/hygiene-modal";
+import { QHSEModal } from "@/components/modals/modal";
 import { Layout } from "@/components/craft";
 
 const poppins = Poppins({
@@ -34,10 +31,7 @@ export default function RootLayout({
   return (
     <Layout className="scroll-smooth">
       <body className={`${poppins.variable} ${roboto.variable}`}>
-        <QualityModal />
-        <EnvironmentModal />
-        <HygieneModal />
-        <SecurityModal />
+        <QHSEModal />
         {children}
       </body>
     </Layout>

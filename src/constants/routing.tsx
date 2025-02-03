@@ -34,7 +34,7 @@ export const ROUTES = [
     href: "/services/formation",
   },
   {
-    label: "À propos",
+    label: "Qui sommes-nous ?",
     href: "/a-propos",
   },
   {
